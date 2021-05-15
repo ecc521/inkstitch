@@ -33,4 +33,4 @@ def open_url(url):
 
     # Any output on stdout will crash inkscape.
     with open(os.devnull, 'w') as null:
-        return subprocess.Popen(command, cwd=cwd, stdout=null)
+        return subprocess.Popen(command, cwd=cwd, stdout=null, shell=True)
